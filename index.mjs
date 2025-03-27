@@ -44,31 +44,82 @@ character5.setItemIntenvory(armor5)
 
 //console.log(character5.inventory[0].name)
 
-const weapon = []
-weapon.push(weapon1, weapon2, weapon3, weapon4, weapon5)
+const weapons = []
+weapons.push(weapon1, weapon2, weapon3, weapon4, weapon5)
 
-const armor = []
-armor.push(armor1, armor2, armor3, armor4, armor5)
+const armors = []
+armors.push(armor1, armor2, armor3, armor4, armor5)
+
+const characters = []
+characters.push(character1, character2, character3, character4, character5)
+
 
 // console.log(weapon)
-// console.log(armor)
-console.log("Weapon list")
-console.log("------------")
-for (let i = 0; i < weapon.length; i++) {
-  const element = weapon[i];
+console.log(characters[0])
 
-  console.log(element.name + ": Min Level = " , element.minLevel + ", Damage = " + element.damage + ", Durability = " + element.durability)
-  
-}
-
+// listWeapons(weapons)
 console.log(" ")
 console.log(" ")
+// listArmors(armors)
+console.log(" ")
+console.log(" ")
+//listCharapters(characters)
 
-console.log("Armor list")
-console.log("------------")
-for (let i = 0; i < armor.length; i++) {
-  const element = armor[i];
+function listWeapons(weapons) {
+  console.log("Weapon list")
+  console.log("------------")
+  for (let i = 0; i < weapons.length; i++) {
+    const element = weapons[i];
 
-  console.log(element.name + ": Min Level = " , element.minLevel + ", Defense = " + element.defense)
-  
+    console.log(element.name + ": Min Level = ", element.minLevel + ", Damage = " + element.damage + ", Durability = " + element.durability)
+
+  }
 }
+
+function listArmors(armors) {
+  console.log("Armor list")
+  console.log("------------")
+  for (let i = 0; i < armors.length; i++) {
+    const element = armors[i];
+  
+    console.log(element.name + ": Min Level = ", element.minLevel + ", Defense = " + element.defense)
+  
+  }
+}
+
+function listCharapters (characters) {
+  console.log("CHARACTER LIST")
+  console.log("------------")
+  for (let i = 0; i < characters.length; i++) {
+    const element = characters[i];
+  
+    console.log(element.name)
+    console.log("------------")
+    console.log("")
+  
+    console.log("Atributes:")
+    console.log("------------")
+    console.log("Level: " + element.level)
+    console.log("Age: " + element.age)
+    console.log("Stamina: " + element.stamina)
+    console.log("------------")
+  
+    console.log("Weapons:")
+    console.log("------------")
+    console.log("Name: " + element.inventory[0].name)
+    console.log("Min Level: " + element.inventory[0].minLevel)
+    console.log("Damage: " + element.inventory[0].damage)
+    console.log("Durability: " + element.inventory[0].durability)
+    console.log("------------")
+  
+    console.log("Armors:")
+    console.log("------------")
+    console.log("Name: " + element.inventory[1].name)
+    console.log("Min Level: " + element.inventory[1].minLevel)
+    console.log("Defense: " + element.inventory[1].defense)
+    console.log("------------")
+    console.log(" ")
+    console.log(" ")
+  }
+}
+
