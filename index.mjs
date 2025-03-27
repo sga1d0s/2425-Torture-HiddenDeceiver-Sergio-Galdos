@@ -54,7 +54,7 @@ const characters = []
 characters.push(character1, character2, character3, character4, character5)
 
 
-// console.log(weapon)
+console.log(armors)
 console.log(characters[0])
 
 // listWeapons(weapons)
@@ -63,7 +63,12 @@ console.log(" ")
 // listArmors(armors)
 console.log(" ")
 console.log(" ")
-//listCharapters(characters)
+// listCharapters(characters)
+console.log(" ")
+console.log(" ")
+// selectArmor(armors)
+console.log(" ")
+console.log(" ")
 
 function listWeapons(weapons) {
   console.log("Weapon list")
@@ -81,29 +86,29 @@ function listArmors(armors) {
   console.log("------------")
   for (let i = 0; i < armors.length; i++) {
     const element = armors[i];
-  
+
     console.log(element.name + ": Min Level = ", element.minLevel + ", Defense = " + element.defense)
-  
+
   }
 }
 
-function listCharapters (characters) {
+function listCharapters(characters) {
   console.log("CHARACTER LIST")
   console.log("------------")
   for (let i = 0; i < characters.length; i++) {
     const element = characters[i];
-  
+
     console.log(element.name)
     console.log("------------")
     console.log("")
-  
+
     console.log("Atributes:")
     console.log("------------")
     console.log("Level: " + element.level)
     console.log("Age: " + element.age)
     console.log("Stamina: " + element.stamina)
     console.log("------------")
-  
+
     console.log("Weapons:")
     console.log("------------")
     console.log("Name: " + element.inventory[0].name)
@@ -111,7 +116,7 @@ function listCharapters (characters) {
     console.log("Damage: " + element.inventory[0].damage)
     console.log("Durability: " + element.inventory[0].durability)
     console.log("------------")
-  
+
     console.log("Armors:")
     console.log("------------")
     console.log("Name: " + element.inventory[1].name)
@@ -123,3 +128,14 @@ function listCharapters (characters) {
   }
 }
 
+function selectArmor(armors) {
+  console.log("Armor with level less than 30")
+  console.log("------------")
+  for (let i = 0; i < armors.length; i++) {
+    const element = armors[i];
+
+    if (element.minLevel < 30) {
+      console.log("Name: " + element.name + " Level: " + element.minLevel)
+    }
+  }
+}
