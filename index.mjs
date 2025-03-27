@@ -54,28 +54,21 @@ characters.push(character1, character2, character3, character4, character5)
 //console.log(weapons)
 console.log(characters)
 
-//listWeapons(weapons)
+listWeapons(weapons)
 console.log(" ")
 console.log(" ")
-//listArmors(armors)
+listArmors(armors)
 console.log(" ")
 console.log(" ")
-//listCharapters(characters)
+listCharapters(characters)
 console.log(" ")
 console.log(" ")
-//selectArmor(armors)
+selectArmor(armors)
 console.log(" ")
 console.log(" ")
-//addWeapons()
+addWeapons()
 
 function listWeapons(weapons) {
-  // add weapons
-  character1.setItemIntenvory(weapon1)
-  character2.setItemIntenvory(weapon2)
-  character3.setItemIntenvory(weapon3)
-  character4.setItemIntenvory(weapon4)
-  character5.setItemIntenvory(weapon5)
-
   // print weapons
   console.log("Weapon list")
   console.log("------------")
@@ -88,13 +81,6 @@ function listWeapons(weapons) {
 }
 
 function listArmors(armors) {
-  // add armor
-  character1.setItemIntenvory(armor1)
-  character2.setItemIntenvory(armor2)
-  character3.setItemIntenvory(armor3)
-  character4.setItemIntenvory(armor4)
-  character5.setItemIntenvory(armor5)
-
   // print armor
   console.log("Armor list")
   console.log("------------")
@@ -155,7 +141,6 @@ function selectArmor(armors) {
 
 function addWeapons() {
   for (let i = 0; i < characters.length; i++) {
-    characters[i].inventory[0] = []
     const characterLevel = characters[i].level;
     console.log("Name: " + characters[i].name + " Level: " + characters[i].level)
     for (let j = 0; j < weapons.length; j++) {
@@ -181,3 +166,7 @@ function addWeapons() {
   //console.log(character4)
 
 }
+
+console.log(character1)
+character1.fumble()
+console.log(character1)
