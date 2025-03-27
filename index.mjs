@@ -36,9 +36,6 @@ character3.setItemIntenvory(armor3)
 character4.setItemIntenvory(weapon4)
 character4.setItemIntenvory(armor4)
 
-character4.setItemIntenvory(weapon4)
-character4.setItemIntenvory(armor4)
-
 character5.setItemIntenvory(weapon5)
 character5.setItemIntenvory(armor5)
 
@@ -54,8 +51,8 @@ const characters = []
 characters.push(character1, character2, character3, character4, character5)
 
 
-console.log(armors)
-console.log(characters[0])
+//console.log(weapons)
+console.log(characters)
 
 // listWeapons(weapons)
 console.log(" ")
@@ -69,6 +66,8 @@ console.log(" ")
 // selectArmor(armors)
 console.log(" ")
 console.log(" ")
+
+addWeapons()
 
 function listWeapons(weapons) {
   console.log("Weapon list")
@@ -138,4 +137,32 @@ function selectArmor(armors) {
       console.log("Name: " + element.name + " Level: " + element.minLevel)
     }
   }
+}
+
+function addWeapons(){
+  for (let i = 0; i < characters.length; i++) {
+    const characterLevel = characters[i].level;
+    console.log("Name: " + characters[i].name + " Level: " + characters[i].level)
+    for (let j = 0; j < weapons.length; j++) {
+      const weaponLevel = weapons[j].minLevel;
+      // console.log(characterLevel)
+      // console.log(weaponLevel)
+      if (characterLevel >= weaponLevel) {
+        characters[i].setItemIntenvory(weapons[j])
+      }
+    }
+    
+    for (let k = 0; k < characters[i].inventory.length; k++) {
+      const weapons = characters[i].inventory[k];
+
+      if (weapons.durability) {
+        console.log("Weapon name : " + weapons.name + " Durability: " + weapons.durability)
+      }
+      
+    }
+    console.log(" ")
+    console.log(" ")
+  }
+  //console.log(character4)
+
 }
