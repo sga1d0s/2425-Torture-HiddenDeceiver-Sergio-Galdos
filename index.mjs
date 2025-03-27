@@ -42,7 +42,7 @@ character4.setItemIntenvory(armor4)
 character5.setItemIntenvory(weapon5)
 character5.setItemIntenvory(armor5)
 
-console.log(character5.inventory[0].name)
+//console.log(character5.inventory[0].name)
 
 const weapon = []
 weapon.push(weapon1, weapon2, weapon3, weapon4, weapon5)
@@ -50,6 +50,25 @@ weapon.push(weapon1, weapon2, weapon3, weapon4, weapon5)
 const armor = []
 armor.push(armor1, armor2, armor3, armor4, armor5)
 
-console.log(weapon)
-console.log(armor)
+// console.log(weapon)
+// console.log(armor)
+console.log("Weapon list")
+console.log("------------")
+for (let i = 0; i < weapon.length; i++) {
+  const element = weapon[i];
 
+  console.log(element.name + ": Min Level = " , element.minLevel + ", Damage = " + element.damage + ", Durability = " + element.durability)
+  
+}
+
+console.log(" ")
+console.log(" ")
+
+console.log("Armor list")
+console.log("------------")
+for (let i = 0; i < armor.length; i++) {
+  const element = armor[i];
+
+  console.log(element.name + ": Min Level = " , element.minLevel + ", Defense = " + element.defense)
+  
+}
